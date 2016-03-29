@@ -34,6 +34,7 @@ public class AddFlight extends javax.swing.JPanel {
     public AddFlight(Staff staffO) {
         initComponents();
         stObj = staffO;        
+        
         //get date & time
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
