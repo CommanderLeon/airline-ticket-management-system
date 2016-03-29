@@ -48,7 +48,7 @@ public class Home extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        test1 = new main.Test();
+        addFlight1 = new main.AddFlight();
         homePanel1 = new main.HomePanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -75,14 +75,19 @@ public class Home extends JFrame {
         setMaximumSize(new java.awt.Dimension(1000, 2147483647));
         setName("frameMain"); // NOI18N
         setPreferredSize(new java.awt.Dimension(1000, 800));
-        getContentPane().setLayout(new java.awt.GridLayout());
-        getContentPane().add(test1);
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
+        getContentPane().add(addFlight1);
         getContentPane().add(homePanel1);
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
 
         jMenu1.setText("File");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         mnHome.setText("Home");
         mnHome.addActionListener(new java.awt.event.ActionListener() {
@@ -187,9 +192,9 @@ public class Home extends JFrame {
         c.revalidate();
         c.repaint();
         c.setBounds(0,0,getContentPane().getWidth(),getContentPane().getHeight());
-        test1.setSize(getContentPane().getWidth(),getContentPane().getHeight());
+        addFlight1.setSize(getContentPane().getWidth(),getContentPane().getHeight());
         c.setVisible(true);
-        c.add(test1);       
+        c.add(homePanel1);
     }//GEN-LAST:event_mnAddFlightActionPerformed
 
     private void mnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnHomeActionPerformed
@@ -206,6 +211,10 @@ public class Home extends JFrame {
     private void mnAddPassengerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAddPassengerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mnAddPassengerActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,6 +252,7 @@ public class Home extends JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private main.AddFlight addFlight1;
     private main.HomePanel homePanel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -262,6 +272,5 @@ public class Home extends JFrame {
     private javax.swing.JMenuItem mnViewPassenger;
     private javax.swing.JMenuItem mnViewStaff;
     private javax.swing.JMenuItem mnViewTicket;
-    private main.Test test1;
     // End of variables declaration//GEN-END:variables
 }

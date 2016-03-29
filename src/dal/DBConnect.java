@@ -13,9 +13,11 @@ import java.sql.SQLException;
  * @author Ruchina
  */
 public class DBConnect {
-    private Connection connect = null;
+    
 
-    public Connection connect(){
+    public static Connection connect(){
+        
+        Connection connect = null;
       
         try {
 		Class.forName("com.mysql.jdbc.Driver");
@@ -24,8 +26,7 @@ public class DBConnect {
 		return null;
 	}
 	try {
-		connect = DriverManager
-		.getConnection("jdbc:mysql://localhost/ams","root", "");
+		connect = DriverManager.getConnection("jdbc:mysql://localhost/ams","root", "");
                 return connect;
 
 	} catch (SQLException e) {
