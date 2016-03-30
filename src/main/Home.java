@@ -48,6 +48,7 @@ public class Home extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        viewFlight1 = new main.ViewFlight();
         addFlight1 = new main.AddFlight();
         homePanel1 = new main.HomePanel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -76,6 +77,7 @@ public class Home extends JFrame {
         setName("frameMain"); // NOI18N
         setPreferredSize(new java.awt.Dimension(1000, 800));
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
+        getContentPane().add(viewFlight1);
         getContentPane().add(addFlight1);
         getContentPane().add(homePanel1);
 
@@ -126,6 +128,11 @@ public class Home extends JFrame {
         jMenu2.add(mnAddFlight);
 
         mnViewFlight.setText("View Flight");
+        mnViewFlight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnViewFlightActionPerformed(evt);
+            }
+        });
         jMenu2.add(mnViewFlight);
 
         mnFlightReports.setText("Flight Reports");
@@ -203,9 +210,9 @@ public class Home extends JFrame {
         c.revalidate();
         c.repaint();
         c.setBounds(0,0,getContentPane().getWidth(),getContentPane().getHeight());
-        homePanel1.setSize(getContentPane().getWidth(),getContentPane().getHeight());
+        viewFlight1.setSize(getContentPane().getWidth(),getContentPane().getHeight());
         c.setVisible(true);
-        c.add(homePanel1);   
+        c.add(viewFlight1);   
     }//GEN-LAST:event_mnHomeActionPerformed
 
     private void mnAddPassengerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAddPassengerActionPerformed
@@ -215,6 +222,10 @@ public class Home extends JFrame {
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void mnViewFlightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnViewFlightActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnViewFlightActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,5 +283,6 @@ public class Home extends JFrame {
     private javax.swing.JMenuItem mnViewPassenger;
     private javax.swing.JMenuItem mnViewStaff;
     private javax.swing.JMenuItem mnViewTicket;
+    private main.ViewFlight viewFlight1;
     // End of variables declaration//GEN-END:variables
 }

@@ -193,7 +193,8 @@ public class AddFlight extends javax.swing.JPanel {
 
     private void addFlightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFlightActionPerformed
         
-        Flight ftObj = new Flight(fidBox.getText(),departureBox.getText(),destinationBox.getText(),dateTimeBox.getText(),planeNoBox.getText(),nosBox.getText(),descriptionBox.getText());
+        Flight ftObj;
+         ftObj = new Flight(fidBox.getText(),departureBox.getText(),destinationBox.getText(),dateTimeBox.getText(),planeNoBox.getText(),nosBox.getText(),descriptionBox.getText());
         
         
     }//GEN-LAST:event_addFlightActionPerformed

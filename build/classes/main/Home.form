@@ -63,6 +63,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="View Flight"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnViewFlightActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnFlightReports">
               <Properties>
@@ -168,6 +171,8 @@
     <Property name="rows" type="int" value="1"/>
   </Layout>
   <SubComponents>
+    <Component class="main.ViewFlight" name="viewFlight1">
+    </Component>
     <Component class="main.AddFlight" name="addFlight1">
     </Component>
     <Component class="main.HomePanel" name="homePanel1">
